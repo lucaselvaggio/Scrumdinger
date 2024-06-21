@@ -29,12 +29,23 @@ struct ScrumdingerApp: App {
             }
             .task {
                 do {
+                    // uncomment this line below to see ErrorView
+                    // try throwError()
                     try await store.load()
                 } catch {
                     errorWrapper = ErrorWrapper(error: error,
                                                 guidance: "Scrumdinger will load sample data and continue.")
                 }
             }
+            .sheet(item: $errorWrapper) {
+                store.scrums = DailyScrum.sampleData
+            } content: { wrapper in
+                ErrorView(errorWrapper: wrapper)
+            }
         }
     }
+}
+
+func throwError() throws {
+    throw SampleError.errorRequired
 }
