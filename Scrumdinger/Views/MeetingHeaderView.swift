@@ -54,6 +54,6 @@ struct MeetingHeaderView: View {
 }
 
 #Preview {
-    MeetingHeaderView(secondsElapsed: 60, secondsRemaining: 180, theme: .bubblegum)
+    MeetingHeaderView(secondsElapsed: 60, secondsRemaining: 180, theme: .app_bubblegum)
         .previewLayout(.sizeThatFits)       // to more accurately represent the subview size in the canvas.
 }

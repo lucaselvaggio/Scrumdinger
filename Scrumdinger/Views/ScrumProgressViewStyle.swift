@@ -31,6 +31,6 @@ struct ScrumProgressViewStyle: ProgressViewStyle {
 
 #Preview{
     ProgressView(value: 0.4)
-        .progressViewStyle(ScrumProgressViewStyle(theme: .buttercup))
+        .progressViewStyle(ScrumProgressViewStyle(theme: .app_buttercup))
         .previewLayout(.sizeThatFits)
 }

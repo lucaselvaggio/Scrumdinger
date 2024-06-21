@@ -26,6 +26,6 @@ struct ThemePicker: View {
 }
 
 #Preview {
-    ThemePicker(selection: .constant(.periwinkle))      /* to create a binding to a hard-coded, immutable value.
+    ThemePicker(selection: .constant(.app_periwinkle))      /* to create a binding to a hard-coded, immutable value.
                                                            Constant bindings are useful in previews or when prototyping your app’s user interface. */
 }

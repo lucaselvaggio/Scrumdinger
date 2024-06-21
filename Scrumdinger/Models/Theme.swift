@@ -11,28 +11,28 @@
 import SwiftUI
 
 enum Theme: String, CaseIterable, Identifiable, Codable{
-    case bubblegum
-    case buttercup
-    case indigo
-    case lavender
-    case magenta
-    case navy
-    case orange
-    case oxblood
-    case periwinkle
-    case poppy
-    case purple
-    case seafoam
-    case sky
-    case tan
-    case teal
-    case yellow
+    case app_bubblegum
+    case app_buttercup
+    case app_indigo
+    case app_lavender
+    case app_magenta
+    case app_navy
+    case app_orange
+    case app_oxblood
+    case app_periwinkle
+    case app_poppy
+    case app_purple
+    case app_seafoam
+    case app_sky
+    case app_tan
+    case app_teal
+    case app_yellow
     
     /* the accent color provides a high-contrast complement to the theme’s main color, ensuring your views remain accessible. */
     var accentColor: Color {
         switch self {
-        case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow: return .black
-        case .indigo, .magenta, .navy, .oxblood, .purple: return .white
+        case .app_bubblegum, .app_buttercup, .app_lavender, .app_orange, .app_periwinkle, .app_poppy, .app_seafoam, .app_sky, .app_tan, .app_teal, .app_yellow: return .black
+        case .app_indigo, .app_magenta, .app_navy, .app_oxblood, .app_purple: return .white
         }
     }
     

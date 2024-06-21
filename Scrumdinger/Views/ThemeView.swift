@@ -21,5 +21,5 @@ struct ThemeView: View {
 }
 
 #Preview {
-    ThemeView(theme: .buttercup)
+    ThemeView(theme: .app_buttercup)
 }
