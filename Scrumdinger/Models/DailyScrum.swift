@@ -9,7 +9,7 @@ import Foundation
 
 /* Because DailyScrum will primarily carry value data, you’ll make it a value type by declaring it as a struct. */
 
-struct DailyScrum : Identifiable {
+struct DailyScrum : Identifiable, Codable {
     let id: UUID                    // to identify the item uniquely
     var title: String
     var attendees: [Attendee]
@@ -37,7 +37,7 @@ struct DailyScrum : Identifiable {
 }
 
 extension DailyScrum {
-    struct Attendee: Identifiable {
+    struct Attendee: Identifiable, Codable {
         let id: UUID                // Scrum attendees could have the same name
         var name: String
         
