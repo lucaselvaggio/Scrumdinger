@@ -40,7 +40,7 @@ struct DetailEditView: View {
                     Text("\(scrum.lengthInMinutes) minutes")
                         .accessibilityHidden(true)              // all the information that VoiceOver needs is in the accessibility value for the slider.
                 }
-                
+                ThemePicker(selection: $scrum.theme)
             }
             Section(header: Text("Attendees")) {
                 ForEach(scrum.attendees) { attendee in

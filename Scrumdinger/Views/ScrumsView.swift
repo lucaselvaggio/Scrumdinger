@@ -13,6 +13,8 @@ struct ScrumsView: View {
      For this data flow, you need to pass another binding down the view hierarchy. */
     @Binding var scrums: [DailyScrum]
     
+    @State private var isPresentingNewScrumView = false
+    
     var body: some View {
         
         /* From the NavigationStack container view, you can traverse a stack of views in a hierarchy. */
@@ -30,10 +32,15 @@ struct ScrumsView: View {
             }
             .navigationTitle("Daily Scrums")
             .toolbar {
-                Button(action: {}){
+                Button(action: {
+                    isPresentingNewScrumView = true
+                }){
                     Image(systemName: "plus")
                 }
                 .accessibilityLabel("New Scrum")
+            }
+            .sheet(isPresented: $isPresentingNewScrumView) {
+                NewScrumSheet(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
             }
         }
     }
