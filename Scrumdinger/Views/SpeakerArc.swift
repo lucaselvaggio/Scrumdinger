@@ -1,7 +1,5 @@
 //
 //  SpeakerArc.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 24/06/24.
 //
 
@@ -14,10 +12,10 @@ struct SpeakerArc: Shape {
 
     let speakerIndex: Int
     
-    // to calculate the degrees of a single arc
+    // Calculate the degrees of a single arc
     let totalSpeakers: Int
     
-    // calculate the value using degreesPerSpeaker and speakerIndex
+    // Calculate the value using degreesPerSpeaker and speakerIndex
     private var degreesPerSpeaker: Double {
         360.0 / Double(totalSpeakers)
     }
@@ -25,7 +23,7 @@ struct SpeakerArc: Shape {
         Angle(degrees: degreesPerSpeaker * Double(speakerIndex) + 1.0)
     }
     
-    // returns the ending angle using the startAngle and degreesPerSpeaker
+    // Returns the ending angle using the startAngle and degreesPerSpeaker
     private var endAngle: Angle {
         Angle(degrees: startAngle.degrees + degreesPerSpeaker - 1.0)
     }
@@ -33,7 +31,7 @@ struct SpeakerArc: Shape {
     // The Shape protocol requires a path(in:) function
     func path(in rect: CGRect) -> Path {
         
-        // for the circle of the arc
+        // For the circle of the arc
         let diameter = min(rect.size.width, rect.size.height) - 24.0
         let radius = diameter / 2.0
         let center = CGPoint(x: rect.midX, y: rect.midY)

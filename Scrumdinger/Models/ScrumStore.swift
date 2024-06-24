@@ -1,13 +1,11 @@
 //
 //  ScrumStore.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 21/06/24.
 //
 
 import Foundation
 
-// ObservableObject is a class-constrained protocol for connecting external model data to SwiftUI views
+/* ObservableObject is a class-constrained protocol for connecting external model data to SwiftUI views. */
 
 @MainActor
 class ScrumStore: ObservableObject {
@@ -38,7 +36,7 @@ class ScrumStore: ObservableObject {
         self.scrums = scrums
     }
 
-    // The difference from 'load()' is that you won’t need to handle a return value from the write operation, but you’ll want to handle errors from saving.
+    /* The difference from 'load()' is that you won’t need to handle a return value from the write operation, but you’ll want to handle errors from saving. */
     func save(scrums: [DailyScrum]) async throws {
         let task = Task {
             let data = try JSONEncoder().encode(scrums)

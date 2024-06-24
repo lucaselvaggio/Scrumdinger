@@ -1,7 +1,5 @@
 //
 //  MeetingView.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 20/06/24.
 //
 

@@ -1,9 +1,12 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-*/
+//
+//  AVPlayer+Ding.swift
+//  Extract from Apple Developer Tutorials.
+//
 
 import Foundation
 import AVFoundation
+
+/* The sharedDingPlayer object plays the ding.wav resource. */
 
 extension AVPlayer {
     static let sharedDingPlayer: AVPlayer = {

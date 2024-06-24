@@ -1,11 +1,11 @@
 //
 //  History.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 21/06/24.
 //
 
 import Foundation
+
+/* Adding Codable conformance at app’s model can write methods to load and save scrums.*/
 
 struct History: Identifiable, Codable {
     let id: UUID

@@ -1,8 +1,6 @@
 //
 //  ScrumProgressViewStyle.swift
-//  Scrumdinger
-//
-//  Added by apple guide in the reference section
+//  Extract from Apple Developer Tutorials.
 //
 
 import SwiftUI

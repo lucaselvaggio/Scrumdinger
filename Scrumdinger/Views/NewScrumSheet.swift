@@ -1,7 +1,5 @@
 //
 //  NewScrumSheet.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 21/06/24.
 //
 

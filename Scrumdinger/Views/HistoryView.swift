@@ -1,7 +1,5 @@
 //
 //  HistoryView.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 24/06/24.
 //
 
