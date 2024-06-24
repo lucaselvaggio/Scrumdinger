@@ -1,7 +1,5 @@
 //
 //  ScrumsView.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 20/06/24.
 //
 
@@ -9,7 +7,7 @@ import SwiftUI
 
 struct ScrumsView: View {
     
-    /* the list view also needs to reflect changes a user makes to an individual scrum on the edit screen.
+    /* The list view also needs to reflect changes a user makes to an individual scrum on the edit screen.
      For this data flow, you need to pass another binding down the view hierarchy. */
     @Binding var scrums: [DailyScrum]
     @Environment(\.scenePhase) private var scenePhase
@@ -42,7 +40,7 @@ struct ScrumsView: View {
                 NewScrumSheet(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
             }
             
-            //  to monitor the operational state of the app, and save user data when the value changes to inactive
+            //  To monitor the operational state of the app, and save user data when the value changes to inactive
             .onChange(of: scenePhase) { phase in
                 if phase == .inactive { saveAction() }
             }

@@ -1,7 +1,5 @@
 //
 //  CardView.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 20/06/24.
 //
 
@@ -16,7 +14,7 @@ struct CardView: View {
         VStack (alignment: .leading) {
             Text(scrum.title)
                 .font(.headline)
-                .accessibilityAddTraits(/*@START_MENU_TOKEN@*/.isHeader/*@END_MENU_TOKEN@*/) // This modifier helps convey the information architecture of the view by reading the scrum title, followed by “heading”.
+                .accessibilityAddTraits(.isHeader) // This modifier helps convey the information architecture of the view by reading the scrum title, followed by “heading”.
             Spacer()
             HStack{
                 Label("\(scrum.attendees.count)", systemImage: "person.3")

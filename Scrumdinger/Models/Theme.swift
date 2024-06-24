@@ -1,11 +1,9 @@
 //
 //  Theme.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 20/06/24.
 //
 
-/* although you’re not creating a view in this section, you add Color properties from the SwiftUI framework.
+/* Although you’re not creating a view in this section, you add Color properties from the SwiftUI framework.
    SwiftUI treats colors as View instances that you can add directly to a view hierarchy. */
 
 import SwiftUI
@@ -28,7 +26,7 @@ enum Theme: String, CaseIterable, Identifiable, Codable{
     case app_teal
     case app_yellow
     
-    /* the accent color provides a high-contrast complement to the theme’s main color, ensuring your views remain accessible. */
+    /* The accent color provides a high-contrast complement to the theme’s main color, ensuring your views remain accessible. */
     var accentColor: Color {
         switch self {
         case .app_bubblegum, .app_buttercup, .app_lavender, .app_orange, .app_periwinkle, .app_poppy, .app_seafoam, .app_sky, .app_tan, .app_teal, .app_yellow: return .black
@@ -37,7 +35,7 @@ enum Theme: String, CaseIterable, Identifiable, Codable{
     }
     
     var mainColor: Color {
-        Color(rawValue)     // to work colors must be defined in the Assets
+        Color(rawValue)     // colors must be defined in the Assets
     }
     var name: String {
         rawValue.capitalized

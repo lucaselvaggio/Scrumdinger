@@ -1,7 +1,5 @@
 //
 //  DetailView.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 20/06/24.
 //
 
@@ -10,7 +8,7 @@ import SwiftUI
 struct DetailView: View {
     @Binding var scrum: DailyScrum
     
-    /* create a source of truth for the binding that you added to the edit view.
+    /* Create a source of truth for the binding that you added to the edit view.
      Update this empty scrum to match the selected scrum when the user taps the Edit button. */
     @State private var editingScrum = DailyScrum.emptyScrum
     @State private var isPresentingEditView = false

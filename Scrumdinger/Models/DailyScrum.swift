@@ -1,7 +1,5 @@
 //
 //  DailyScrum.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 20/06/24.
 //
 
@@ -38,7 +36,7 @@ struct DailyScrum : Identifiable, Codable {
 
 extension DailyScrum {
     struct Attendee: Identifiable, Codable {
-        let id: UUID                // Scrum attendees could have the same name
+        let id: UUID                // scrum attendees could have the same name
         var name: String
         
         init(id: UUID = UUID(), name: String) {
@@ -53,7 +51,8 @@ extension DailyScrum {
 }
 
 extension DailyScrum {
-    /* that provides some sample data. */
+    
+    /* That provides some sample data. */
     static let sampleData: [DailyScrum] = [
         DailyScrum(
             title: "Design",

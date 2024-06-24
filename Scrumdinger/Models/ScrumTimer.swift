@@ -1,6 +1,7 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-*/
+//
+//  ScrumTimer.swift
+//  Extract from Apple Developer Tutorials.
+//
 
 import Foundation
 

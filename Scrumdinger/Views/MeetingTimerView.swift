@@ -1,7 +1,5 @@
 //
 //  MeetingTimerView.swift
-//  Scrumdinger
-//
 //  Created by Luca Selvaggio on 21/06/24.
 //
 
@@ -32,7 +30,7 @@ struct MeetingTimerView: View {
                 .accessibilityElement(children: .combine)
                 .foregroundStyle(theme.accentColor)
             }
-        // This layer will display the list of speakers.
+            // This layer will display the list of speakers.
             .overlay{
                 ForEach(speakers) { speaker in
                     if speaker.isCompleted, let index = speakers.firstIndex(where: { $0.id == speaker.id }) {
