@@ -30,7 +30,7 @@ struct MeetingView: View {
                 )
                 MeetingTimerView(speakers: scrumTimer.speakers, theme: scrum.theme)
                 
-                MeetingFooterView(speakers: scrum.attendees.speakers, skipAction: scrumTimer.skipSpeaker)
+                MeetingFooterView(speakers: scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker)
                 
             }
             .padding()
