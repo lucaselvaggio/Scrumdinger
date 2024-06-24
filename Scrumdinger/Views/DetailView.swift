@@ -11,7 +11,7 @@ struct DetailView: View {
     @Binding var scrum: DailyScrum
     
     /* create a source of truth for the binding that you added to the edit view.
-       Update this empty scrum to match the selected scrum when the user taps the Edit button. */
+     Update this empty scrum to match the selected scrum when the user taps the Edit button. */
     @State private var editingScrum = DailyScrum.emptyScrum
     @State private var isPresentingEditView = false
     
@@ -50,9 +50,11 @@ struct DetailView: View {
                     Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
                 }
                 ForEach(scrum.history) { history in
-                    HStack {
-                        Image(systemName: "calendar")
-                        Text(history.date, style: .date)
+                    NavigationLink(destination: HistoryView(history: history)) {
+                        HStack {
+                            Image(systemName: "calendar")
+                            Text(history.date, style: .date)
+                        }
                     }
                 }
             }
